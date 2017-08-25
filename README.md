@@ -1,6 +1,6 @@
 # Troubleshooter
 
-App for troubleshoot allmoust everything. Created using [Angular CLI](https://github.com/angular/angular-cli) version 1.3.0.
+Web app for troubleshooting every problem. Created using [Angular CLI](https://github.com/angular/angular-cli) version 1.3.0.
 
 ## Development server
 
