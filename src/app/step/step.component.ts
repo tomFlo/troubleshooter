@@ -14,6 +14,7 @@ export class Option {
 export class Step {
   id: string;
   title: string;
+  description?: string;
   options: Option[];
 
   constructor(id: string, title: string, options: Option[]) {
@@ -56,11 +57,11 @@ export class StepComponent implements AfterViewInit, OnChanges {
     const size = this.step.options.length;
     const width = this.linesSvg.nativeElement.clientWidth;
     const startX = width / 2;
-    const start = startX + ',60 ' + startX + ',130 ';
+    const start = startX + ',60 ' + startX + ',200 ';
     let i = 0;
     for (i; i < size; i++) {
       const endX = width - ((width / (size * 2)) * (i * 2 + 1));
-      const end = endX  + ',130 ' + endX + ',180 ';
+      const end = endX + ',200 ' + endX + ',280 ';
       this.lines.push(start + end);
     }
   }

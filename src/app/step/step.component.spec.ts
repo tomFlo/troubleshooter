@@ -1,7 +1,7 @@
 import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
 import {Step, StepComponent} from './step.component';
-import {CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
+import {NO_ERRORS_SCHEMA} from '@angular/core';
 import {StepService} from './step.service';
 import {ConfigService} from '../core/config.service';
 
@@ -13,7 +13,7 @@ describe('StepComponent', () => {
     TestBed.configureTestingModule({
       declarations: [StepComponent],
       providers: [StepService, ConfigService],
-      schemas: [CUSTOM_ELEMENTS_SCHEMA]
+      schemas: [NO_ERRORS_SCHEMA]
     }).compileComponents();
   }));
 
@@ -25,8 +25,6 @@ describe('StepComponent', () => {
     options.push(new Option('IPE', 'ipe-login'));
     component.step = new Step('choose-app', 'Which Environment would you like to troubleshoot?', options);
     component.lines = [];
-    component.linesSvg = null;
-    fixture.detectChanges();
   });
 
   it('should be created', () => {

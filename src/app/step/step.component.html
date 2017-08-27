@@ -1,11 +1,14 @@
-<md-grid-list *ngIf="step" [cols]="step.options.length" rowHeight="120px">
-  <svg #linesSvg height="240" width="100%" (window:resize)="drawLines()">
+<md-grid-list *ngIf="step" [cols]="step.options.length" rowHeight="180px">
+  <svg #linesSvg height="360px" width="100%" (window:resize)="drawLines()">
     <polyline *ngFor="let line of lines" [attr.points]="line"
-              style="fill:transparent;stroke:lightgrey;stroke-width:2" />
+              style="fill:transparent;stroke:lightgrey;stroke-width:2"/>
   </svg>
   <md-grid-tile [colspan]="step.options.length" rowspan="1">
-    <md-card>
-      {{step.title}}
+    <md-card class="step">
+      <md-card-header>
+        <md-card-title>{{step.title}}</md-card-title>
+      </md-card-header>
+      <md-card-content *ngIf="step.description">{{step.description}}</md-card-content>
     </md-card>
   </md-grid-tile>
   <md-grid-tile *ngFor="let option of step.options" rowspan="1">

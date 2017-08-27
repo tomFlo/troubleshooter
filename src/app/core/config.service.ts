@@ -7,6 +7,7 @@ function createSteps() {
     {
       id: 'step1',
       title: 'Do you have first problem?',
+      description: 'First problem is related to most possible problem. You should be aware that having this problem can stop you from continuing the work with our app.',
       options: [
         {
           title: 'Yes',
