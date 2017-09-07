@@ -4,11 +4,11 @@ import {ObservableService} from './observable.service';
 import {ConfigService} from './config.service';
 
 @NgModule({
-  imports: [
-    CommonModule
-  ],
-  providers: [ObservableService, ConfigService],
-  declarations: []
+    imports: [
+        CommonModule
+    ],
+    providers: [ObservableService, ConfigService],
+    declarations: []
 })
 export class CoreModule {
 }

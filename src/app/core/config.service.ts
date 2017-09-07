@@ -3,76 +3,76 @@ import {Step} from '../step/step.component';
 
 
 function createSteps() {
-  return [
-    {
-      id: 'step1',
-      title: 'Do you have first problem?',
-      description: 'First problem is related to most possible problem. You should be aware that having this problem can stop you from continuing the work with our app.',
-      options: [
+    return [
         {
-          title: 'Yes',
-          stepId: 'step2'
+            id: 'step1',
+            title: 'Do you have first problem?',
+            description: 'First problem is related to most possible problem. You should be aware that having this problem can stop you from continuing the work with our app.',
+            options: [
+                {
+                    title: 'Yes',
+                    stepId: 'step2'
+                },
+                {
+                    title: 'No',
+                    stepId: 'step3'
+                }
+            ]
         },
         {
-          title: 'No',
-          stepId: 'step3'
+            id: 'step2',
+            title: 'Do you have second problem?',
+            options: [
+                {
+                    title: 'Yes',
+                    stepId: 'step3'
+                },
+                {
+                    title: 'No',
+                    stepId: 'step4'
+                },
+                {
+                    title: 'Restart',
+                    stepId: 'step1'
+                }
+            ]
+        },
+        {
+            id: 'step3',
+            title: 'Do you have third problem?',
+            options: [
+                {
+                    title: 'Yes',
+                    stepId: 'step2'
+                },
+                {
+                    title: 'No',
+                    stepId: 'step4'
+                },
+                {
+                    title: 'Yes',
+                    stepId: 'step2'
+                },
+                {
+                    title: 'No',
+                    stepId: 'step4'
+                }
+            ]
+        },
+        {
+            id: 'step4',
+            title: 'No problems!',
+            options: [{
+                title: 'Restart',
+                stepId: 'step1'
+            }]
         }
-      ]
-    },
-    {
-      id: 'step2',
-      title: 'Do you have second problem?',
-      options: [
-        {
-          title: 'Yes',
-          stepId: 'step3'
-        },
-        {
-          title: 'No',
-          stepId: 'step4'
-        },
-        {
-          title: 'Restart',
-          stepId: 'step1'
-        }
-      ]
-    },
-    {
-      id: 'step3',
-      title: 'Do you have third problem?',
-      options: [
-        {
-          title: 'Yes',
-          stepId: 'step2'
-        },
-        {
-          title: 'No',
-          stepId: 'step4'
-        },
-        {
-          title: 'Yes',
-          stepId: 'step2'
-        },
-        {
-          title: 'No',
-          stepId: 'step4'
-        }
-      ]
-    },
-    {
-      id: 'step4',
-      title: 'No problems!',
-      options: [{
-        title: 'Restart',
-        stepId: 'step1'
-      }]
-    }
-  ];
+    ];
 }
 
 @Injectable()
 export class ConfigService {
 
-  steps: Step[] = createSteps();
+    steps: Step[] = createSteps();
 
 }

@@ -7,19 +7,19 @@ import {AppComponent} from './app.component';
 import {StageModule} from './stage/stage.module';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    MdIconModule,
-    MdGridListModule,
-    MdToolbarModule,
-    StageModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent
+    ],
+    imports: [
+        BrowserModule,
+        BrowserAnimationsModule,
+        MdIconModule,
+        MdGridListModule,
+        MdToolbarModule,
+        StageModule
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
 })
 export class AppModule {
 }

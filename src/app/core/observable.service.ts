@@ -2,14 +2,14 @@ import {Subject} from 'rxjs/Subject';
 
 export class ObservableService<T> {
 
-  private subject = new Subject<T>();
+    private subject = new Subject<T>();
 
-  next(t: T): void {
-    this.subject.next(t);
-  }
+    next(t: T): void {
+        this.subject.next(t);
+    }
 
-  subscribe(callback): void {
-    this.subject.subscribe((next: T) => callback(next));
-  }
+    subscribe(callback): void {
+        this.subject.subscribe((next: T) => callback(next));
+    }
 
 }

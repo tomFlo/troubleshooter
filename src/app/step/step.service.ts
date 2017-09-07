@@ -5,18 +5,18 @@ import {ConfigService} from '../core/config.service';
 
 @Injectable()
 export class StepService extends ObservableService<Step> {
-  steps: Step[];
+    steps: Step[];
 
-  constructor(configService: ConfigService) {
-    super();
-    this.steps = configService.steps;
-  }
+    constructor(configService: ConfigService) {
+        super();
+        this.steps = configService.steps;
+    }
 
-  start() {
-    this.next(this.steps[0]);
-  }
+    start() {
+        this.next(this.steps[0]);
+    }
 
-  nextStep(stepId: string) {
-    this.next(this.steps.find(s => s.id === stepId));
-  }
+    nextStep(stepId: string) {
+        this.next(this.steps.find(s => s.id === stepId));
+    }
 }

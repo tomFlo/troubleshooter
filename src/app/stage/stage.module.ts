@@ -4,12 +4,12 @@ import {StageComponent} from './stage.component';
 import {StepModule} from '../step/step.module';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    StepModule
-  ],
-  exports: [StageComponent],
-  declarations: [StageComponent]
+    imports: [
+        CommonModule,
+        StepModule
+    ],
+    exports: [StageComponent],
+    declarations: [StageComponent]
 })
 export class StageModule {
 }

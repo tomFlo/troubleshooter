@@ -1,13 +1,13 @@
 .center {
-  text-align: center;
+    text-align: center;
 }
 
 .tsh-header {
-  background: #3f51b5;
-  color: rgba(255,255,255,.87);
-  font-size: 40px;
-  font-weight: 500;
-  line-height: 40px;
-  padding-top: 30px;
-  padding-bottom: 50px;
+    background: #3f51b5;
+    color: rgba(255, 255, 255, .87);
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 40px;
+    padding-top: 30px;
+    padding-bottom: 50px;
 }

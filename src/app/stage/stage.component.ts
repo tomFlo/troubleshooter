@@ -3,19 +3,19 @@ import {Step} from '../step/step.component';
 import {StepService} from '../step/step.service';
 
 @Component({
-  selector: 'tsh-stage',
-  templateUrl: './stage.component.html',
-  styleUrls: ['./stage.component.css']
+    selector: 'tsh-stage',
+    templateUrl: './stage.component.html',
+    styleUrls: ['./stage.component.css']
 })
 export class StageComponent implements OnInit {
 
-  step: Step;
+    step: Step;
 
-  constructor(private stepService: StepService) {
-    this.stepService.subscribe((step: Step) => this.step = step);
-  }
+    constructor(private stepService: StepService) {
+        this.stepService.subscribe((step: Step) => this.step = step);
+    }
 
-  ngOnInit(): void {
-    this.stepService.start();
-  }
+    ngOnInit(): void {
+        this.stepService.start();
+    }
 }
